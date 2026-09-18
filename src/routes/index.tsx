@@ -69,7 +69,7 @@ function Home() {
             <img src="/cifra-conseil-logo.png" alt="Cifra Conseils" className="h-12 w-auto object-contain" />
           </a>
           <nav className="hidden items-center gap-8 text-sm text-white/75 md:flex" aria-label="Navigation principale">
-            <a className="transition-colors hover:text-[#02C39A]" href="#services">Services</a>
+            <Link className="transition-colors hover:text-[#02C39A]" to="/services">Services</Link>
             <a className="transition-colors hover:text-[#02C39A]" href="#approche">Notre approche</a>
             <Link className="transition-colors hover:text-[#02C39A]" to="/a-propos">À propos</Link>
             <Link className="transition-colors hover:text-[#02C39A]" to="/contact">Contact</Link>
@@ -77,7 +77,7 @@ function Home() {
           <a href="#contact" className="hidden rounded-[8px] bg-[#02C39A] px-5 py-3 text-sm font-semibold text-[#0D1F2D] transition-transform hover:scale-[1.03] active:scale-95 md:block">Réserver une consultation <ArrowRight className="ml-2 inline h-4 w-4" /></a>
           <button className="rounded-[8px] p-2 md:hidden" onClick={() => setMenuOpen(!menuOpen)} aria-label="Ouvrir le menu">{menuOpen ? <X /> : <Menu />}</button>
         </div>
-        {menuOpen && <nav className="border-t border-white/15 bg-[#0D1F2D] px-5 py-5 md:hidden"><div className="flex flex-col gap-5 text-sm"><a href="#services" onClick={() => setMenuOpen(false)}>Services</a><a href="#approche" onClick={() => setMenuOpen(false)}>Notre approche</a><Link to="/a-propos">À propos</Link><Link to="/contact">Contact</Link></div></nav>}
+        {menuOpen && <nav className="border-t border-white/15 bg-[#0D1F2D] px-5 py-5 md:hidden"><div className="flex flex-col gap-5 text-sm"><Link to="/services" onClick={() => setMenuOpen(false)}>Services</Link><a href="#approche" onClick={() => setMenuOpen(false)}>Notre approche</a><Link to="/a-propos" onClick={() => setMenuOpen(false)}>À propos</Link><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link></div></nav>}
       </header>
 
       <main id="accueil">
@@ -110,7 +110,7 @@ function Home() {
         <section id="contact" className="bg-[#028090] px-5 py-24 text-white lg:py-32"><div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start"><div><p className="label-kicker text-[#CFF9EC]">Premier échange</p><h2 className="mt-5 font-serif text-4xl leading-tight sm:text-5xl">Parlons de ce que vos chiffres pourraient vous permettre.</h2><p className="mt-6 max-w-md leading-7 text-white/75">Une conversation de 30 minutes, sans jargon et sans obligation. Dites-nous où vous en êtes.</p><div className="mt-10 space-y-4 text-sm text-white/80"><a href="mailto:info@cifraconseils.ca" className="block hover:text-[#CFF9EC]">info@cifraconseils.ca</a><a href="tel:+14185550192" className="block hover:text-[#CFF9EC]">418 555-0192</a><p>Lévis · Québec · Chaudière-Appalaches</p></div></div><form onSubmit={handleSubmit} className="rounded-[12px] bg-[#0D1F2D] p-6 sm:p-9">{formSent ? <div className="py-12 text-center"><Check className="mx-auto h-10 w-10 text-[#02C39A]" /><h3 className="mt-5 font-serif text-3xl">Message reçu.</h3><p className="mt-3 text-white/60">Merci. Nous vous répondrons dans les plus brefs délais.</p></div> : <><div className="grid gap-5 sm:grid-cols-2"><label className="field-label">Nom<input required name="nom" placeholder="Votre nom" /></label><label className="field-label">Entreprise<input required name="entreprise" placeholder="Nom de votre entreprise" /></label><label className="field-label">Courriel<input required type="email" name="email" placeholder="vous@entreprise.ca" /></label><label className="field-label">Téléphone<input name="telephone" placeholder="418 555-0000" /></label></div><label className="field-label mt-5 block">Parlez-nous de votre situation<textarea required name="message" rows={5} placeholder="Ce que vous aimeriez améliorer ou clarifier..."></textarea></label><button className="mt-6 w-full rounded-[8px] bg-[#02C39A] px-6 py-4 font-semibold text-[#0D1F2D] transition-transform hover:scale-[1.02] active:scale-95" type="submit">Envoyer ma demande <ArrowRight className="ml-2 inline h-4 w-4" /></button></>}</form></div></section>
       </main>
 
-      <footer className="bg-[#0D1F2D] px-5 py-10 text-white lg:px-8"><div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 border-t border-white/15 pt-8 text-sm text-white/55 sm:flex-row"><p>© 2026 Cifra Conseils Inc. Tous droits réservés.</p><div className="flex gap-5"><a href="#services" className="hover:text-[#02C39A]">Services</a><Link to="/a-propos" className="hover:text-[#02C39A]">À propos</Link><Link to="/contact" className="hover:text-[#02C39A]">Contact</Link></div></div></footer>
+      <footer className="bg-[#0D1F2D] px-5 py-10 text-white lg:px-8"><div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 border-t border-white/15 pt-8 text-sm text-white/55 sm:flex-row"><p>© 2026 Cifra Conseils Inc. Tous droits réservés.</p><div className="flex gap-5"><Link to="/services" className="hover:text-[#02C39A]">Services</Link><Link to="/a-propos" className="hover:text-[#02C39A]">À propos</Link><Link to="/contact" className="hover:text-[#02C39A]">Contact</Link></div></div></footer>
     </div>
   )
 }
