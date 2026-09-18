@@ -1,5 +1,5 @@
 import { Link, createFileRoute } from '@tanstack/react-router'
-import { ArrowLeft, ArrowRight, BarChart3, Check, ClipboardCheck, FileCheck2, ShieldCheck } from 'lucide-react'
+import { ArrowLeft, ArrowRight, BarChart3, Check, ClipboardCheck, FileCheck2, Gauge, ShieldCheck } from 'lucide-react'
 
 const services = [
   {
@@ -17,15 +17,22 @@ const services = [
     deliverables: ['Planification stratégique', 'Gestion de trésorerie', 'Structure de capital', 'Indicateurs de performance (KPIs)', 'Analyse de rentabilité'],
   },
   {
-    icon: ShieldCheck,
+    icon: Gauge,
     number: '03',
+    title: 'Gestion de croissance',
+    intro: 'Accompagner votre PME en croissance pour structurer ses finances et ses opérations, afin de soutenir une expansion saine, contrôlée et rentable.',
+    deliverables: ['Structuration financière : comptabilité, contrôles internes et reporting', 'Planification de trésorerie et de capital', 'Accompagnement au financement : banques, subventions et investisseurs', 'Mise à l’échelle des processus, outils et automatisation', 'Tableaux de bord et KPIs de suivi de croissance'],
+  },
+  {
+    icon: ShieldCheck,
+    number: '04',
     title: 'Services de fiscalité',
     intro: 'Une coordination simple avec des partenaires spécialisés lorsque votre situation le demande.',
     deliverables: ['Préparation et coordination des déclarations', 'Planification fiscale', 'Suivi des échéances', 'Transmission des informations aux partenaires'],
   },
   {
     icon: FileCheck2,
-    number: '04',
+    number: '05',
     title: 'Fin d’année, audit et mission d’examen',
     intro: 'Un dossier préparé avec méthode et une communication fluide jusqu’à la livraison des états financiers.',
     deliverables: ['Préparation des états financiers', 'Préparation du dossier de fin d’année', 'Coordination avec les auditeurs externes', 'Suivi des demandes et des ajustements'],
@@ -42,9 +49,9 @@ const plans = [
 export const Route = createFileRoute('/services')({
   head: () => ({ meta: [
     { title: 'Services | Cifra Conseils' },
-    { name: 'description', content: 'Découvrez les services de comptabilité, de direction financière fractionnelle, de fiscalité et de fin d’année de Cifra Conseils.' },
+    { name: 'description', content: 'Découvrez les services de comptabilité, de direction financière fractionnelle, de gestion de croissance, de fiscalité et de fin d’année de Cifra Conseils.' },
     { property: 'og:title', content: 'Services | Cifra Conseils' },
-    { property: 'og:description', content: 'Des expertises financières à la bonne mesure des PME québécoises.' },
+    { property: 'og:description', content: 'Des expertises financières et opérationnelles à la bonne mesure des PME québécoises, de la structuration à la croissance.' },
   ] }),
   component: Services,
 })

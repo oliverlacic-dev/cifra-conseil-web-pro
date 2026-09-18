@@ -7,6 +7,7 @@ const heroImage = 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?aut
 const services = [
   { icon: ClipboardCheck, title: 'Comptabilité à temps partiel', text: 'Des livres clairs, à jour et utiles pour prendre vos décisions avec confiance.' },
   { icon: BarChart3, title: 'Direction financière fractionnelle', text: 'Une vision de CFO expérimenté, quelques heures par semaine ou selon votre rythme.' },
+  { icon: BarChart3, title: 'Gestion de croissance', text: 'Structurez vos finances, votre trésorerie et vos processus pour grandir de façon contrôlée et rentable.' },
   { icon: Megaphone, title: 'Marketing fractionnel', text: 'Une direction marketing selon vos besoins : stratégie, priorités, suivi des résultats et accompagnement de votre croissance.' },
   { icon: MonitorCog, title: 'Direction et gestion des TI', text: 'Une gouvernance technologique adaptée à votre PME : stratégie TI, suivi des projets, sécurité et gestion de vos partenaires.' },
   { icon: ShieldCheck, title: 'Fiscalité, avec nos partenaires', text: 'Une coordination simple avec des spécialistes de confiance lorsque votre dossier le demande.' },
