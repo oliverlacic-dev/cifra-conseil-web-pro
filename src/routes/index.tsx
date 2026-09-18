@@ -63,7 +63,7 @@ function Home() {
   }
 
   return (
-    <div className="min-h-dvh overflow-hidden bg-background text-foreground">
+    <div suppressHydrationWarning className="min-h-dvh overflow-hidden bg-background text-foreground">
       <header className="fixed inset-x-0 top-0 z-50 border-b border-white/15 bg-[#0D1F2D]/90 text-white backdrop-blur-md">
         <div className="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-5 lg:px-8">
           <a href="#accueil" className="flex items-center gap-3" aria-label="Cifra Conseils, accueil">
