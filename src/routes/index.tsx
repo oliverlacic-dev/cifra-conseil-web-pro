@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, createFileRoute } from '@tanstack/react-router'
-import { ArrowRight, BarChart3, BriefcaseBusiness, Check, ClipboardCheck, FileCheck2, Megaphone, Menu, MonitorCog, ShieldCheck, Sparkles, X } from 'lucide-react'
+import { ArrowRight, BarChart3, BriefcaseBusiness, Check, ClipboardCheck, FileCheck2, Megaphone, Menu, MonitorCog, Settings, ShieldCheck, Sparkles, X } from 'lucide-react'
 import { toast } from 'sonner'
 
 const heroImage = 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1800&q=85'
@@ -10,6 +10,7 @@ const services = [
   { icon: BarChart3, title: 'Gestion de croissance', text: 'Structurez vos finances, votre trésorerie et vos processus pour grandir de façon contrôlée et rentable.' },
   { icon: Megaphone, title: 'Marketing fractionnel', text: 'Une direction marketing selon vos besoins : stratégie, priorités, suivi des résultats et accompagnement de votre croissance.' },
   { icon: MonitorCog, title: 'Direction et gestion des TI', text: 'Une gouvernance technologique adaptée à votre PME : stratégie TI, suivi des projets, sécurité et gestion de vos partenaires.' },
+  { icon: Settings, title: 'Sélection et implantation d’ERP', text: 'Un accompagnement neutre pour choisir, migrer et implanter le bon système ERP, avec une expertise reconnue en implantation Odoo.' },
   { icon: ShieldCheck, title: 'Fiscalité, avec nos partenaires', text: 'Une coordination simple avec des spécialistes de confiance lorsque votre dossier le demande.' },
   { icon: FileCheck2, title: 'Fin d’année, audit et examen', text: 'Une préparation rigoureuse et une communication fluide jusqu’à la livraison.' },
 ]
