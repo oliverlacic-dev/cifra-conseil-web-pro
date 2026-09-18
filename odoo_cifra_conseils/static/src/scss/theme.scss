@@ -1,0 +1,31 @@
+:root {
+    --cifra-navy: #0D1F2D;
+    --cifra-teal: #028090;
+    --cifra-mint: #02C39A;
+    --cifra-gold: #C8923A;
+    --cifra-cream: #F8F7F0;
+}
+
+body { color: var(--cifra-navy); font-family: 'Inter', sans-serif; }
+.cifra-header { background: rgba(13, 31, 45, .96); border-bottom: 1px solid rgba(255,255,255,.12); }
+.cifra-header a, .cifra-header .nav-link { color: var(--cifra-cream); }
+.cifra-header a:hover, .cifra-header .nav-link:hover { color: var(--cifra-mint); }
+.cifra-footer { background: var(--cifra-navy); color: var(--cifra-cream); }
+.cifra-hero { background: var(--cifra-navy); color: var(--cifra-cream); }
+.cifra-hero h1 { font-size: clamp(2.8rem, 6vw, 5.5rem); font-weight: 600; letter-spacing: -.04em; line-height: 1.05; max-width: 900px; }
+.cifra-hero .lead { color: rgba(248,247,240,.7); font-size: 1.2rem; line-height: 1.7; max-width: 650px; }
+.cifra-kicker { color: var(--cifra-mint); font-size: .75rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.cifra-section { background: var(--cifra-cream); }
+.cifra-section h2 { font-size: clamp(2rem, 4vw, 3.25rem); font-weight: 600; letter-spacing: -.03em; }
+.cifra-section p { color: #53636a; font-size: 1.05rem; line-height: 1.8; }
+.cifra-service-card { background: #fff; border: 1px solid #b8ddd5; border-radius: 12px; padding: 2rem; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+.cifra-service-card:hover { border-color: var(--cifra-teal); box-shadow: 0 14px 32px rgba(2,128,144,.12); transform: translateY(-4px); }
+.cifra-service-card h2 { font-size: 1.65rem; margin-top: 2rem; }
+.cifra-number { color: var(--cifra-gold); font-family: monospace; font-weight: 700; }
+.cifra-link { color: var(--cifra-teal); font-weight: 700; text-decoration: none; }
+.cifra-note { background: #E2F5F0; border-radius: 12px; padding: 2rem; }
+.cifra-note li { margin-bottom: .8rem; }
+.cifra-cta { background: var(--cifra-teal); color: var(--cifra-cream); }
+.btn-primary { background: var(--cifra-mint); border-color: var(--cifra-mint); color: var(--cifra-navy); font-weight: 700; }
+.btn-primary:hover { background: var(--cifra-gold); border-color: var(--cifra-gold); color: var(--cifra-navy); }
+@media (max-width: 575.98px) { .cifra-hero h1 { font-size: 2.8rem; } .cifra-service-card { padding: 1.5rem; } }

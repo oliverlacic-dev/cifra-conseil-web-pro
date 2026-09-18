@@ -1,0 +1,19 @@
+$o-color-palettes: map-merge($o-color-palettes, (
+    'cifra': (
+        'o-color-1': #028090,
+        'o-color-2': #02C39A,
+        'o-color-3': #E2F5F0,
+        'o-color-4': #F8F7F0,
+        'o-color-5': #0D1F2D,
+    ),
+));
+$o-selected-color-palettes-names: append($o-selected-color-palettes-names, 'cifra');
+$o-website-values-palettes: (
+    (
+        'color-palettes-name': 'cifra',
+        'font': 'Inter',
+        'headings-font': 'Inter',
+        'navbar-font': 'Inter',
+        'buttons-font': 'Inter',
+    ),
+);

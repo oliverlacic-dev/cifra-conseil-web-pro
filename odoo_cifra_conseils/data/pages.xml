@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="page_services" model="website.page">
+        <field name="name">Services</field>
+        <field name="is_published" eval="True"/>
+        <field name="key">odoo_cifra_conseils.page_services</field>
+        <field name="url">/services</field>
+        <field name="type">qweb</field>
+        <field name="arch" type="xml">
+            <t t-name="odoo_cifra_conseils.page_services">
+                <t t-call="website.layout" additional_title.translate="Services | Cifra Conseils" meta_description.translate="Direction financière, comptabilité fractionnelle et implantation Odoo pour PME québécoises.">
+                    <div id="wrap" class="oe_structure">
+                        <section class="cifra-hero o_cc o_cc1">
+                            <div class="container py-5 py-lg-6">
+                                <p class="cifra-kicker">Nos expertises</p>
+                                <h1>Les fonctions clés de votre PME, à la bonne mesure.</h1>
+                                <p class="lead">Une équipe expérimentée pour clarifier vos chiffres, structurer vos décisions et vous accompagner là où votre entreprise en a le plus besoin.</p>
+                            </div>
+                        </section>
+                        <section class="s_text_block cifra-section py-5 py-lg-6">
+                            <div class="container">
+                                <div class="row g-4">
+                                    <t t-foreach="[('01','Comptabilité à temps partiel','Une information financière fiable, régulière et adaptée à votre rythme de gestion.'),('02','Direction financière fractionnelle','Une perspective de CFO expérimenté pour soutenir vos décisions sans créer un poste à temps plein.'),('03','Gestion de croissance','Structurez vos finances, votre trésorerie et vos processus pour grandir de façon contrôlée et rentable.'),('04','Services de fiscalité','Une coordination simple avec des partenaires spécialisés lorsque votre situation le demande.'),('05','Fin d’année, audit et mission d’examen','Un dossier préparé avec méthode et une communication fluide jusqu’à la livraison des états financiers.'),('06','Sélection et implantation d&apos;ERP','Un accompagnement neutre pour choisir, migrer et implanter le bon système ERP.') ]" t-as="service">
+                                        <div class="col-lg-6">
+                                            <article class="cifra-service-card h-100">
+                                                <span class="cifra-number" t-esc="service[0]"/>
+                                                <h2 t-esc="service[1]"/>
+                                                <p t-esc="service[2]"/>
+                                                <a href="/contact" class="cifra-link">Parlons de vos besoins <i class="fa fa-arrow-right ms-2"/></a>
+                                            </article>
+                                        </div>
+                                    </t>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="s_call_to_action cifra-cta o_cc o_cc2 py-5">
+                            <div class="container text-center">
+                                <h2>Une fonction financière à la bonne mesure de votre croissance.</h2>
+                                <p>Parlons de votre réalité et du prochain cap à franchir.</p>
+                                <a href="/contact" class="btn btn-primary btn-lg">Réserver une consultation</a>
+                            </div>
+                        </section>
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+
+    <record id="page_about_us" model="website.page">
+        <field name="name">À propos</field>
+        <field name="is_published" eval="True"/>
+        <field name="key">odoo_cifra_conseils.page_about_us</field>
+        <field name="url">/a-propos</field>
+        <field name="type">qweb</field>
+        <field name="arch" type="xml">
+            <t t-name="odoo_cifra_conseils.page_about_us">
+                <t t-call="website.layout" additional_title.translate="À propos | Cifra Conseils" meta_description.translate="Découvrez l’approche de Cifra Conseils pour les PME québécoises.">
+                    <div id="wrap" class="oe_structure">
+                        <section class="cifra-hero o_cc o_cc1"><div class="container py-5 py-lg-6"><p class="cifra-kicker">À propos</p><h1>Une expertise solide. Une relation simple.</h1><p class="lead">Cifra Conseils accompagne les PME avec plus de 20 ans d’expérience en finance et une compréhension concrète des opérations.</p></div></section>
+                        <section class="s_text_block cifra-section py-5"><div class="container"><div class="row g-5"><div class="col-lg-7"><h2>Une expertise adaptée à votre réalité</h2><p>Notre équipe relie la stratégie aux décisions du quotidien : trésorerie, rentabilité, structure de capital, indicateurs de performance et priorités de croissance.</p><p>Chaque mandat est structuré pour les PME de Lévis, de Québec, de la Rive-Sud et des régions environnantes.</p></div><div class="col-lg-5"><div class="cifra-note"><h3>Notre façon de travailler</h3><ul><li>Écouter avant de recommander</li><li>Rendre les chiffres compréhensibles</li><li>Dire les choses avec franchise et respect</li><li>Mettre l’expérience stratégique au service du concret</li></ul></div></div></div></div></section>
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+
+    <record id="page_contact" model="website.page">
+        <field name="name">Contact</field>
+        <field name="is_published" eval="True"/>
+        <field name="key">odoo_cifra_conseils.page_contact</field>
+        <field name="url">/contact</field>
+        <field name="type">qweb</field>
+        <field name="arch" type="xml">
+            <t t-name="odoo_cifra_conseils.page_contact">
+                <t t-call="website.layout" additional_title.translate="Contact | Cifra Conseils" meta_description.translate="Réservez une première conversation avec Cifra Conseils.">
+                    <div id="wrap" class="oe_structure"><section class="cifra-hero o_cc o_cc1"><div class="container py-5 py-lg-6"><p class="cifra-kicker">Premier échange</p><h1>Faisons le point.</h1><p class="lead">Parlez-nous de votre entreprise et de ce qui vous préoccupe. La première conversation est simple, directe et sans obligation.</p></div></section><section class="s_website_form cifra-section py-5"><div class="container"><div class="row justify-content-center"><div class="col-lg-8"><form action="/website/form/" method="post" data-model_name="crm.lead" class="o_mark_required"><input type="hidden" name="name" value="Demande de consultation Cifra Conseils"/><div class="row g-3"><div class="col-md-6"><label for="cifra_name">Nom</label><input id="cifra_name" type="text" name="contact_name" class="form-control" required="required"/></div><div class="col-md-6"><label for="cifra_company">Entreprise</label><input id="cifra_company" type="text" name="partner_name" class="form-control" required="required"/></div><div class="col-md-6"><label for="cifra_email">Courriel</label><input id="cifra_email" type="email" name="email_from" class="form-control" required="required"/></div><div class="col-md-6"><label for="cifra_phone">Téléphone</label><input id="cifra_phone" type="tel" name="phone" class="form-control"/></div><div class="col-12"><label for="cifra_message">Message</label><textarea id="cifra_message" name="description" rows="6" class="form-control" required="required"/></div><div class="col-12"><button type="submit" class="btn btn-primary btn-lg">Envoyer ma demande</button></div></div></form></div></div></div></section></div>
+                </t>
+            </t>
+        </field>
+    </record>
+</odoo>

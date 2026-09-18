@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="cifra_layout" inherit_id="website.layout" name="Cifra Conseils layout">
+        <xpath expr="//header" position="attributes"><attribute name="class" add="cifra-header" separator=" "/></xpath>
+        <xpath expr="//footer" position="attributes"><attribute name="class" add="cifra-footer" separator=" "/></xpath>
+    </template>
+</odoo>
