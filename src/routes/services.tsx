@@ -1,5 +1,5 @@
 import { Link, createFileRoute } from '@tanstack/react-router'
-import { ArrowLeft, ArrowRight, BarChart3, Check, ClipboardCheck, FileCheck2, Gauge, Settings, ShieldCheck } from 'lucide-react'
+import { ArrowLeft, ArrowRight, BarChart3, Check, ClipboardCheck, FileCheck2, Gauge, GraduationCap, Settings, ShieldCheck } from 'lucide-react'
 
 const services = [
   {
@@ -50,6 +50,14 @@ const services = [
       'Formation et accompagnement post-implantation',
     ],
     expertise: 'Expertise reconnue en implantation Odoo',
+  },
+  {
+    icon: GraduationCap,
+    number: '07',
+    title: 'Formation Odoo utilisateur',
+    intro: 'Des formations pratiques pour aider vos équipes à utiliser Odoo avec confiance, selon vos processus et vos responsabilités.',
+    deliverables: ['Formation par rôle et par module', 'Exercices pratiques dans votre environnement', 'Création de procédures simples', 'Accompagnement après la mise en service'],
+    expertise: 'Une adoption durable, au-delà de l’implantation',
   },
 ]
 
